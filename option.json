@@ -1,0 +1,14 @@
+{
+    "token": "NTYzNzkxNTE5MzM3ODA3ODcy.XKed5Q.XS7ay4IvO-jqxTHZscV68dW5WGE",
+    "prefix" : "$",
+    "modChannel": "staff",
+    "annonceChannel": "annonce",
+    "rolesLU": {
+        "blue": "Tech Blue",
+        "red": "Tech Red",
+        "fullspeed": "Line-Up Fullspeed",
+        "dirt": "Line-Up Dirt",
+        "zrt": "Line-Up Zrt",
+        "rpg": "Line-Up RPG"
+    }
+}
