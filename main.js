@@ -26,7 +26,7 @@ client.on('message', async message=>{
             message.guild.channels.find('name', config.modChannel).send("@"+tag  + " souhaite rejoindre l'écurie sa présentation va bientôt arriver !");
             
         }
-        if((command == "newplayer" || command == "np") && message.guild.channels.find('name',config.modChannel) == message.channel){
+        if((command == "newplayer" || command == "np") && message.author.roles.find('name',config.modChannel)){
             if(args.length != 2 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234) et sa line-up: $newplayer @Pseudo#1234 Red");
             }
@@ -42,7 +42,7 @@ client.on('message', async message=>{
             }catch(e){
                 console.log(e);
             }
-        }else if((command == "playerleft" || command == "pl") && message.guild.channels.find('name',config.modChannel) == message.channel){
+        }else if((command == "playerleft" || command == "pl") && message.author.roles.find('name',config.modChannel)){
             if(args.length != 1 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234): $playerleft @Pseudo#1234");
             }
@@ -54,7 +54,7 @@ client.on('message', async message=>{
                 }
             })
             annonce(mbr.user, "", "", false, false, message.guild.channels.find('name', config.annonceChannel), "Démission de")
-        }else if(command == "switch" && message.guild.channels.find('name',config.modChannel) == message.channel){
+        }else if(command == "switch" && message.author.roles.find('name',config.modChannel)){
             let isSwitch = false;
             if(args.length != 3 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234) et sa line-up actuelle et la nouvelle: $newplayer @Pseudo#1234 red blue");
