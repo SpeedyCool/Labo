@@ -1,6 +1,6 @@
 {
     "prefix" : "$",
-    "modChannel": "bureau-modo:oncoming_police_car:",
+    "modChannel": "Manager",
     "annonceChannel": "transferts:twisted_rightwards_arrows:",
     "rolesLU": {
         "blue": "Tech Blue",
