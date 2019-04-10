@@ -165,4 +165,4 @@ function addR(msg, gens, lu, swt){
     }
 }
 
-client.login(config.token);
+client.login(process.env.token);
