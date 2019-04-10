@@ -24,9 +24,9 @@ client.on('message', async message=>{
         if(command == "test"){
             message.author.send("Salut à toi tu souhaites rejoindre l'écurie SkyŁαb ? :grin: Je t'invite donc à te présenter et à énumérer tes motivations pour entrer dans l'écurie en tapant la commande $pres suivi de ta présentation en message privé à moi !!\n Suite à cela, si tu correspond aux critères demandés, le rôle de Joueur Test te sera attribué et tu pourras commencer les tests bonne chance :grin:")
             message.guild.channels.find('name', config.modChannel).send("@"+tag  + " souhaite rejoindre l'écurie sa présentation va bientôt arriver !");
-            
+            return
         }
-        if((command == "newplayer" || command == "np") && message.author.roles.find('name',config.modChannel)){
+        if((command == "newplayer" || command == "np") && message.member.roles.find('name',config.modChannel)){
             if(args.length != 2 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234) et sa line-up: $newplayer @Pseudo#1234 Red");
             }
@@ -42,7 +42,7 @@ client.on('message', async message=>{
             }catch(e){
                 console.log(e);
             }
-        }else if((command == "playerleft" || command == "pl") && message.author.roles.find('name',config.modChannel)){
+        }else if((command == "playerleft" || command == "pl") && message.member.roles.find('name',config.modChannel)){
             if(args.length != 1 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234): $playerleft @Pseudo#1234");
             }
@@ -54,7 +54,7 @@ client.on('message', async message=>{
                 }
             })
             annonce(mbr.user, "", "", false, false, message.guild.channels.find('name', config.annonceChannel), "Démission de")
-        }else if(command == "switch" && message.author.roles.find('name',config.modChannel)){
+        }else if(command == "switch" && message.author.member.find('name',config.modChannel)){
             let isSwitch = false;
             if(args.length != 3 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234) et sa line-up actuelle et la nouvelle: $newplayer @Pseudo#1234 red blue");
@@ -75,6 +75,7 @@ client.on('message', async message=>{
 
             annonce(mbr.user, args[1], args[2], false, true, message.guild.channels.find('name', config.annonceChannel), "Changement de LU")
         }
+	message.delete()
 
 
     }else{
