@@ -1,7 +1,7 @@
 {
     "prefix" : "$",
     "modChannel": "Manager",
-    "annonceChannel": "transferts:twisted_rightwards_arrows:",
+    "annonceChannel": "transferts",
     "rolesLU": {
         "blue": "Tech Blue",
         "red": "Tech Red",
