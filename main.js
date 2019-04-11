@@ -53,8 +53,8 @@ client.on('message', async message=>{
                     mbr.removeRole(role.id);
                 }
             })
-            annonce(mbr.user, "", "", false, false, message.guild.channels.find('name', config.annonceChannel), "Démission de")
-        }else if(command == "switch" && message.author.member.find('name',config.modChannel)){
+            annonce(mbr.user, "", "", false, false, message.guild.channels.find('name', config.annonceChannel), "Départ de")
+        }else if(command == "switch" && message.member.roles.find('name',config.modChannel)){
             let isSwitch = false;
             if(args.length != 3 || message.mentions == null){
                 return message.reply("Veuillez saisir l'@ du joueur (@Pseudo#1234) et sa line-up actuelle et la nouvelle: $newplayer @Pseudo#1234 red blue");
