@@ -22,7 +22,7 @@ client.on('message', async message=>{
 
     if(message.guild != null){
         if(command == "test"){
-	    if(args.length != 1){return message.reply('!test [tech/rpg/dirt/zrt/fs]')}
+	    if(args.length != 1){return message.reply('$test [tech/rpg/dirt/zrt/fs]')}
             message.author.send("Salut à toi tu souhaites rejoindre l'écurie SkyŁαb ? :grin: Je t'invite donc à te présenter et à énumérer tes motivations pour entrer dans l'écurie en tapant la commande $pres suivi de ta présentation en message privé à moi !!\n Suite à cela, si tu correspond aux critères demandés, le rôle de Joueur Test te sera attribué et tu pourras commencer les tests bonne chance :grin:")
             message.guild.channels.find('id', "555020259657252895").send("@"+tag  + " souhaite rejoindre l'écurie dans la lu " + args[1] + " sa présentation va bientôt arriver !");
             return
