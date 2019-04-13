@@ -82,7 +82,7 @@ client.on('message', async message=>{
     }else{
         if(command == "pres"){
             let msg = args.join(' ');
-            client.guilds.find('name', "TutoVideo").channels.find('id', "555020259657252895").send("@"+ tag + " a envoyé sa présentation: \n" + msg);
+            client.guilds.find('name', "SkyŁαb").channels.find('id', "555020259657252895").send("@"+ tag + " a envoyé sa présentation: \n" + msg);
         }
     }
 
