@@ -13,9 +13,9 @@ client.on('ready', ()=>{
 })
 
 client.on('message', async message=>{
-    if(message.channel == message.guild.channels.find('id', "554937449260908555")){
-    	message.delete();
-    }
+    //if(message.channel == message.guild.channels.find('id', "554937449260908555")){
+    //	message.delete();
+    //}
 	
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
