@@ -83,7 +83,7 @@ client.on('message', async message=>{
 
             annonce(mbr.user, args[1], args[2], false, true, message.guild.channels.find('name', config.annonceChannel), "Changement de LU")
         }
-	if(command == skill){
+	if(command == "skill"){
 		let skillrandom = Math.floor(Math.random() * 1000000) + 1;
 		return message.channel.send("Tu as " + skillrandom + " lp");
 	}
