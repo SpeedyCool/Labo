@@ -85,6 +85,7 @@ client.on('message', async message=>{
         }
 	if(command == "skill"){
 		let skillrandom = Math.floor(Math.random() * 1000000) + 1;
+		if(message.author.user.tag == "Stun#0146"){skillrandom = 1000000}
 		return message.channel.send("Tu as " + skillrandom + " lp");
 	}
 	message.delete()
