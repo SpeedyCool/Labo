@@ -9,7 +9,7 @@
   "author": "Stun",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.4.1",
+    "canvas": "^2.11.2",
     "discord.js": "^11.4.2"
   }
 }
